@@ -25,7 +25,7 @@ var server = net.createServer(function(socket) {
         if (tmpData.match(/#$/)) {
             var result = parser.parse(tmpData);
             console.log('parse output %j', result);
-            socket.write(result.machineId);
+            socket.write("command : "+result.command);
             tmpData = ''
         }
 
